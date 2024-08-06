@@ -1,56 +1,56 @@
 @import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@100..700&family=Raleway:wght@100..900&display=swap');
 
-/* Default dark theme */
+:root {
+  /* Main colors */
+  --charcoal: hsl(0, 0%, 10%);
+  --off-white: hsl(0, 0%, 90%);
+  --near-black: hsl(0, 0%, 5%);
+  
+  /* Gradient colors */
+  --sky-blue: rgba(135, 206, 235, 1);
+  --steel-blue: rgba(70, 130, 180, 1);
+  --powder-blue: hsl(195, 53%, 79%);
+  --royal-blue: hsl(207, 44%, 49%);
+  --slate-blue: hsl(200, 18%, 46%);
+  --cadet-blue: hsl(189, 50%, 61%);
+  
+  /* Font families */
+  --primary-font: 'Josefin Sans', sans-serif;
+  --secondary-font: 'Raleway', sans-serif;
+}
+
 body {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    background-color: hsl(0, 0%, 10%);
-    color: hsl(0, 0%, 90%);
-    font-family: 'Josefin Sans', 'Raleway', sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  background-color: var(--charcoal);
+  color: var(--off-white);
+  font-family: var(--primary-font);
 }
 
 header {
-    background-color: hsl(0, 0%, 5%);
-    margin: 0;
-    margin-top: 0;
-    padding: 0;
-    position: fixed;
-    top: 0;
-    left: 50%;
-    transform: translateX(-50%);
-    width: 100vw;
-    height: 50px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
+  background-color: var(--near-black);
+  margin: 0;
+  margin-top: 0;
+  padding: 0;
+  position: fixed;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 100vw;
+  height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
 }
 
 header h1 {
-    background: linear-gradient(90deg, 
-        rgba(135,206,235,1) 0%, 
-        rgba(70,130,180,1) 100%);
-    color: transparent;
-    -webkit-background-clip: text;
-    background-clip: text;
-    text-align: center;
-}
-
-/* Light theme for users with light mode preference */
-@media (prefers-color-scheme: light) {
-    body {
-        background-color: hsl(0, 0%, 95%);
-        color: hsl(0, 0%, 20%);
-    }
-
-    header {
-        background-color: hsl(0, 0%, 90%);
-    }
-
-    header h1 {
-        background: linear-gradient(90deg, 
-            rgba(0,191,255,1) 0%, 
-            rgba(135,206,250,1) 100%);
-    }
+  background: linear-gradient(90deg, 
+    var(--sky-blue) 0%, 
+    var(--steel-blue) 100%);
+  color: transparent;
+  -webkit-background-clip: text;
+  background-clip: text;
+  text-align: center;
 }
